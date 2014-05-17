@@ -82,7 +82,23 @@ public class MainController {
 		personService.add(person);
 
 		// This will re to /WEB-INF/pages/person/after-add.jsp
-		return "person/aftr-add";
+		return "person/after-add";
+	}
+	/**
+	 * Retrieves the view page
+	 *
+	 * @return the name of the JSP page
+	 */
+	@RequestMapping(value = "/persons/view", method = RequestMethod.GET)
+	public String getView(@RequestParam(value="id", required=true) Integer id, Model model) {
+		logger.debug("Received request to show view page");
+
+		// Retrieve existing Person and add to model
+		// This is the formBackingObject
+		model.addAttribute("personAttribute", personService.get(id));
+
+		// This will resolve to /WEB-INF/pages/person/view.jsp
+		return "/person/view";
 	}
 	/**
 	 * Retrieves the edit page
