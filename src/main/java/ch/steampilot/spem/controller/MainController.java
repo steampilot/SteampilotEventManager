@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Handles and retrieves person request
  */
 @Controller
-@RequestMapping("/spfg")
+@RequestMapping("/spem")
 public class MainController {
 	protected static Logger logger = Logger.getLogger("controller");
 	@Resource(name = "personService")
