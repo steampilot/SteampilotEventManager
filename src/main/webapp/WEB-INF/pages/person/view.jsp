@@ -55,7 +55,7 @@
 	</tr>
 	<tr>
 		<th>Zip Code</th>
-		<td><c:out value="${personAttribute.zipcode}"/> </td>
+		<td><c:out value="${personAttribute.zipCode}"/> </td>
 	</tr>
 	<tr>
 		<th>City</th>

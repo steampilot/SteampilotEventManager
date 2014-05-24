@@ -28,42 +28,47 @@ public class Person implements Serializable {
 	@GeneratedValue
 	private Integer id;
 
-	@Column(name = "FIRST_NAME")
+	@Column(name = "Title")
+	private String title;
+
+	@Column(name = "FirstName")
 	private String firstName;
 
-	@Column(name = "LAST_NAME")
+	@Column(name = "LastName")
 	private String lastName;
-	@Column(name = "BIRTHDAY")
+	@Column(name = "Birthday")
 	private Date birthday;
 
-	@Column(name = "EMAIL")
+	@Column(name = "Email")
 	private String email;
 
-	@Column(name = "PHONE")
+	@Column(name = "Phone")
 	private String phone;
 
-	@Column(name = "ADDRESS_1")
+	@Column(name = "Address1")
 	private String address1;
 
-	@Column(name = "ADRDESS_2")
+	@Column(name = "Address2")
 	private String address2;
 
-	@Column(name = "CITY")
+	@Column(name = "City")
 	private String city;
 
-	@Column(name = "ZIPCODE")
-	private Integer zipcode;
+	@Column(name = "ZipCode")
+	private Integer zipCode;
 
-	@Column(name = "COUNTRY")
+	@Column(name = "Country")
 	private String country;
 
-	public Integer getId() {
-		return id;
-	}
+	public Integer getId() { return id; }
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
+	public String getTitle() { return title; }
+
+	public void setTitle(String title) { this.title = title; }
 
 	public String getFirstName() {
 		return firstName;
@@ -129,12 +134,12 @@ public class Person implements Serializable {
 		this.city = city;
 	}
 
-	public Integer getZipcode() {
-		return zipcode;
+	public Integer getZipCode() {
+		return zipCode;
 	}
 
-	public void setZipcode(Integer zipcode) {
-		this.zipcode = zipcode;
+	public void setZipCode(Integer zipcode) {
+		this.zipCode = zipcode;
 	}
 
 	public String getCountry() {
