@@ -25,14 +25,14 @@
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
 	      p:dataSource-ref="dataSource"
 	      p:configLocation="${hibernate.config}"
-	      p:packagesToScan="org.krams.tutorial"/>
+	      p:packagesToScan="ch.steampilot.spem"/>
 
 	<!-- Declare a datasource that has pooling capabilities-->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 	      destroy-method="close"
 	      p:driverClass="${app.jdbc.driverClassName}"
 	      p:jdbcUrl="${app.jdbc.url}"
-	      p:user="${dataSource}"
+	      p:user= "${app.jdbc.username}"
 	      p:password="${app.jdbc.password}"
 	      p:acquireIncrement="5"
 	      p:idleConnectionTestPeriod="60"

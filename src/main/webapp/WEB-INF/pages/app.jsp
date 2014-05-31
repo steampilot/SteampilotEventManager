@@ -7,7 +7,7 @@
 <body>
 	<h1>${message}</h1>
 	<h2>${app}</h2>
-	<c:url var="personListUrl" value="/spem/persons"/>
+	<c:url var="personListUrl" value="/persons/list"/>
 	<a href="${personListUrl}">List all Persons</a>
 
 </body>

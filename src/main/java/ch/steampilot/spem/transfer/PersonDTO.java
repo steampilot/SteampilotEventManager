@@ -1,71 +1,45 @@
+package ch.steampilot.spem.transfer;
+
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
- * Created by Jerome Roethlisberger on 16.05.14.
+ * Created by Jerome Roethlisberger on 29.05.14.
  */
-package ch.steampilot.spem.entity;
 
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-/**
- * Person Entity
- *
- * For a complete reference see
- * <a href="http://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/">
- * Hibernate Annotations Community Documentations</a>
- */
-@Entity
-@Table(name = "PERSON")
-public class Person implements Serializable {
-	private static final long serialVersionUID = -5527566248002296042L;
-	@Id
-	@Column(name = "id")
-	@GeneratedValue
+@Component
+public class PersonDTO {
 	private Integer id;
-
-	@Column(name = "title")
 	private String title;
-
-	@Column(name = "first_name")
 	private String firstName;
-
-	@Column(name = "last_name")
 	private String lastName;
-
-	@Column(name = "email")
 	private String email;
-
-	@Column(name = "phone")
 	private String phone;
-
-	@Column(name = "address_1")
 	private String address1;
-
-	@Column(name = "address_2")
 	private String address2;
-
-	@Column(name = "city")
 	private String city;
-
-	@Column(name = "zip_code")
 	private Integer zipCode;
-
-	@Column(name = "country")
 	private String country;
+	//private List<Event> event;
+	//private List<Venue> venue;
 
-	public Integer getId() { return id; }
+
+	public Integer getId() {
+		return id;
+	}
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getTitle() { return title; }
+	public String getTitle() {
+		return title;
+	}
 
-	public void setTitle(String title) { this.title = title; }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -82,7 +56,6 @@ public class Person implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
 
 	public String getEmail() {
 		return email;

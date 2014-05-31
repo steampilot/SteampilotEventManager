@@ -9,7 +9,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,8 +23,12 @@
 <body>
 
 <h1>Add New Person</h1>
-<c:url var="saveUrl" value="/spfg/persons/add" />
+<c:url var="saveUrl" value="/persons/add"/>
 <form:form cssClass="form-horizontal" modelAttribute="personAttribute" method="POST" action="${saveUrl}">
+	<div class="form-group">
+		<form:label cssClass="col-sm-2 control-label" path="title">Title:</form:label>
+		<form:input cssClass="form-control" path="title"/>
+	</div>
 	<div class="form-group">
 		<form:label cssClass="col-sm-2 control-label" path="firstName">First Name:</form:label>
 		<form:input cssClass="form-control" path="firstName"/>
@@ -34,12 +38,8 @@
 		<form:input cssClass="form-control" path="lastName"/>
 	</div>
 	<div class="form-group">
-		<form:label cssClass="col-sm-2 control-label" path="birthtday" >Birthday:</form:label>
-		<form:input type="date" cssClass="form-control" path="birthday"/>
-	</div>
-	<div class="form-group">
 		<form:label cssClass="col-sm-2 control-label" path="email">Email:</form:label>
-		<form:input type="email" cssClass="form-control" path="email"/>
+		<form:input cssClass="form-control" path="email"/>
 	</div>
 	<div class="form-group">
 		<form:label cssClass="col-sm-2 control-label" path="phone">Phone:</form:label>
@@ -54,8 +54,8 @@
 		<form:input cssClass="form-control" path="address2"/>
 	</div>
 	<div>
-		<form:label cssClass="col-sm-2 conrol-label" path="zipcode">Zip Code:</form:label>
-		<form:input cssClass="form-control" path="address2"/>
+		<form:label cssClass="col-sm-2 conrol-label" path="zipCode">Zip Code:</form:label>
+		<form:input cssClass="form-control" path="zipCode"/>
 	</div>
 	<div>
 		<form:label cssClass="col-sm-2 conrol-label" path="city">City:</form:label>
@@ -65,14 +65,14 @@
 		<form:label cssClass="col-sm-2 control-label" path="country">Country:</form:label>
 		<form:input cssClass="form-control" path="country"/>
 	</div>
-	<div class="form-group" >
-		<input type="submit" class="btn btn-primary" value="Save" />
+	<div class="form-group">
+		<input type="submit" class="btn btn-primary" value="Save"/>
 	</div>
 </form:form>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -12,6 +12,6 @@ public class MainController {
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("message", "Hello world!");
 		model.addAttribute("app", "Steampilot Event Manager");
-		return "hello";
+		return "app";
 	}
 }
