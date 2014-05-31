@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.mchange.c3p0:com.springsource.com.mchange.v2.c3p0:0.9.1.21" type="repository">
+    <properties maven-id="com.mchange.c3p0:com.springsource.com.mchange.v2.c3p0:0.9.1.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/com.springsource.com.mchange.v2.c3p0-0.9.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
