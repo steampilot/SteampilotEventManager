@@ -28,6 +28,9 @@ public class PersonService {
 		Person person = personRepository.get(id);
 		return person;
 	}
+	public Person create() {
+		return personRepository.create();
+	}
 
 	public void add(Person person){
 		personRepository.add(person);

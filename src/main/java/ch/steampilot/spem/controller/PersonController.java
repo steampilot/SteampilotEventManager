@@ -50,7 +50,7 @@ public class PersonController {
 
 		// Create new Person and add to transfer
 		// This is the formBackingObject
-		model.addAttribute("personAttribute", new Person());
+		model.addAttribute("personAttribute", personService.create());
 
 		// This will resolve to /WEB-INF/pages/person/add.jsp
 		return "persons/add";
