@@ -14,12 +14,13 @@ import javax.persistence.Table;
 /**
  * Person Entity
  *
+ * Holds the data of one single person and maps it to its corresponding mysql table using Hibernate annotations
  * For a complete reference see
  * <a href="http://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/">
  * Hibernate Annotations Community Documentations</a>
  */
 @Entity
-@Table(name = "PERSON")
+@Table(name = "person")
 public class Person implements Serializable {
 	private static final long serialVersionUID = -5527566248002296042L;
 	@Id

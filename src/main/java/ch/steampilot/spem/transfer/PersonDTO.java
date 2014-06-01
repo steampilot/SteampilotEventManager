@@ -1,13 +1,18 @@
-package ch.steampilot.spem.transfer;
-
-import org.springframework.stereotype.Component;
-
-import java.util.Date;
 
 /**
  * Created by Jerome Roethlisberger on 29.05.14.
  */
 
+package ch.steampilot.spem.transfer;
+import java.util.Date;
+import org.springframework.stereotype.Component;
+
+/**
+ * Person Data Transfer Object
+ *
+ * Holds the consolidated data of a person with all its parent data
+ * for the use as single model attribute passed by the controller to its view
+ */
 @Component
 public class PersonDTO {
 	private Integer id;
@@ -22,7 +27,6 @@ public class PersonDTO {
 	private Integer zipCode;
 	private String country;
 	//private List<Event> event;
-	//private List<Venue> venue;
 
 
 	public Integer getId() {
@@ -112,4 +116,5 @@ public class PersonDTO {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
 }

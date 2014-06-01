@@ -8,7 +8,9 @@
 	<h1>${message}</h1>
 	<h2>${app}</h2>
 	<c:url var="personListUrl" value="/persons/list"/>
+	<c:url var="venueListUrl" value="/venues/list" />
 	<a href="${personListUrl}">List all Persons</a>
+	<a href="${venueListUrl}">List all Venues</a>
 
 </body>
 </html>

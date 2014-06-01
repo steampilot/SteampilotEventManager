@@ -58,9 +58,7 @@ public class PersonController {
 
 	/**
 	 * Adds a new person by delegating the processing to PersonRepository.
-	 * Displays a confirmation JSP page
-	 *
-	 * @return  the name of the JSP page
+	 * @return  redirects to all person list
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String postAdd(@ModelAttribute("personAttribute") Person person) {
@@ -85,16 +83,15 @@ public class PersonController {
 
 		// Retrieve existing Person and add to transfer
 		// This is the formBackingObject
-		model.addAttribute("personAttribute", personService.get(id));
+		model.addAttribute("personAttribute", personService.getOne(id));
 
 		// This will resolve to /WEB-INF/pages/person/edit.jsp
 		return "persons/edit";
 	}
 	/**
 	 * Edits an existing person by delegating the processing to PersonRepository.
-	 * Displays a confirmation JSP page
 	 *
-	 * @return  the name of the JSP page
+	 * @return  redirects to all person list
 	 */
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
 	public String postEdit(@RequestParam("id") Integer id,
@@ -116,9 +113,7 @@ public class PersonController {
 
 	/**
 	 * Deletes an existing person by delegating the processing to PersonRepository.
-	 * Displays a confirmation JSP page
-	 *
-	 * @return  the name of the JSP page
+	 * @return  redirects to all person list
 	 */
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String getDelete(@RequestParam(value="id")Integer id) {

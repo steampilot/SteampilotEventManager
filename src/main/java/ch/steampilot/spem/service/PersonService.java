@@ -14,35 +14,70 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Service Layer to process persons
+ */
 @Service("personService")
 public class PersonService {
 	@Autowired
 	@Resource(name = "personRepository")
 	private PersonRepository personRepository;
 
+	/**
+	 * Delegates to PersonRepository to get all Persons
+	 * @return the retrieved list of all persons
+	 */
 	public List getAll(){
 		List<Person> personList = personRepository.getAll();
 		return personList;
 	}
-	public Person get(Integer id) {
-		Person person = personRepository.get(id);
+
+	/**
+	 * Delegates to PersonRepository to get one single Person by ID
+	 * @param id the identifying id of a single person
+	 * @return the retrieved single person
+	 */
+	public Person getOne(Integer id) {
+		Person person = personRepository.getOne(id);
 		return person;
 	}
+
+	/**
+	 * Delegates to PersonRepository to create a new empty Person
+	 * @return the new created empty person
+	 */
 	public Person create() {
 		return personRepository.create();
 	}
 
+	/**
+	 * Delegates to PersonRepository to save the created person
+	 * @param person the person to process
+	 */
 	public void add(Person person){
 		personRepository.add(person);
 	}
 
+	/**
+	 * Delegates to PersonRepository to save the edited Person
+	 * @param person the person to process
+	 */
 	public void edit(Person person) {
 		personRepository.edit(person);
 	}
+
+	/**
+	 * Delegates to PersonRepository to delete the existing Person identified by its id
+	 * @param id the identifying id of a single person
+	 */
 	public void delete(Integer id) {
 		personRepository.delete(id);
 	}
 
+	/**
+	 * Creates a Person Data Transfer Object to consolidate data from one to many associations
+	 * @return the list of all created personDTOs
+	 */
 	public List<PersonDTO> getDTOs(){
 		List<PersonDTO> personDTOs = new ArrayList<PersonDTO>();
 		List<Person> persons = personRepository.getAll();
